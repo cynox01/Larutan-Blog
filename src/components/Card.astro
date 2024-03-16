@@ -1,61 +1,101 @@
 ---
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
+// interface Props {
+// 	title: string;
+// 	body: string;
+// 	href: string;
+// 	img: string;
+	
+// }
 
-const { href, title, body } = Astro.props;
+// const { href, title, body, img } = Astro.props;
 ---
+<div class="cards">
+	<div class="card">
+		<div class="card__image">
+			<img src="../img/BlogImage7.png" alt="image" />
+		</div>
+		<div class="card__content">
+			<h3 class="card__title">things to know before visiting </h3>
+			<p class="card__body">Progressively incentivize cooperative systems through
+				technically sound functionalities. Credibly productivate
+				seamless data with flexible schemas.</p>
+			<a href="" class="card__link">Read More</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__image">
+			<img src="../img/BlogImage6.png" alt="image" />
+		</div>
+		<div class="card__content">
+			<h3 class="card__title">things to know before visiting </h3>
+			<p class="card__body">Progressively incentivize cooperative systems through
+				technically sound functionalities. Credibly productivate
+				seamless data with flexible schemas.</p>
+			<a href="" class="card__link">Read More</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__image">
+			<img src="../img/BlogImage9.png" alt="image" />
+		</div>
+		<div class="card__content">
+			<h3 class="card__title">things to know before visiting </h3>
+			<p class="card__body">Progressively incentivize cooperative systems through
+				technically sound functionalities. Credibly productivate
+				seamless data with flexible schemas.</p>
+			<a href="" class="card__link">Read More</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__image">
+			<img src="../img/BlogImage8.png" alt="image" />
+		</div>
+		<div class="card__content">
+			<h3 class="card__title">things to know before visiting </h3>
+			<p class="card__body">Progressively incentivize cooperative systems through
+				technically sound functionalities. Credibly productivate
+				seamless data with flexible schemas.</p>
+			<a href="" class="card__link">Read More</a>
+		</div>
+	</div>
+</div>
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
+	
+
 <style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
+	*{
 		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		padding: 0;
 	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
+	.cards{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		align-items: center;
+		
+		/* width: 250px; */
+		gap: 1rem;
+
+		padding: 1rem;
 	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
+	.card{
+		background-color: aliceblue;
 	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
+	.card__image{
+		width: 100%;
+		height: 100%;
+	}
+	.card__image img{
+		width: 100%;
+		
+	}
+	.card__content h3, p{
+		color: black;
+	}
+	@media screen and (min-width: 636px){
+		.cards{
+			grid-template-columns: repeat(4, 1fr);
+		}
+		
 	}
 </style>

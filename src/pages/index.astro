@@ -1,13 +1,31 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
 
 ---
 
 <Layout title="Larutan Blog">
 	
 	<main>
-        
+        <h2>Popular topics</h2>
+
+        <div class="tags">
+            <ul>
+                <li>All</li>
+                <li>Adventure</li>
+                <li>Travel</li>
+                <li>Fashion</li>
+                <li>Tecnology</li>
+                <li>Trending</li>
+            </ul>
+            <span>View All</span>
+        </div>
+
+        <section class="post">
+            <Card />
+
+        </section>
 
         <div class="home-larutan">
             <h2>Larutan-Home</h2>
@@ -15,6 +33,37 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 
     </main>
+
+    <style>
+        .tags{
+            display: flex;
+            justify-content: space-between;
+        }
+        h2{
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 5rem ;
+            padding: 2rem;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            padding: 2rem;
+        }
+        ul li{
+            padding: .3rem;
+            font-size: .5rem;
+            cursor: pointer;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            font-size: .5rem;
+            cursor: pointer;
+        }
+    </style>
 	
 	
 	
