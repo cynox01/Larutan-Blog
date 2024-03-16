@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* Navigation */
+
+.home-larutan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-larutan h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navigation-link{
+    margin: 0 1rem;
+}
+.navigation-link a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,21 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Nav from '../components/Nav.astro';
 ---
 
 <Layout title="Larutan Blog">
+    <Nav />
 	<main>
-        <ul class="navigation">
-            <li class="navigation-link"><a href="/">Home</a> </li>
-            <li class="navigation-link"> <a href="/about">About</a></li>
-			<li class="navigation-link"> <a href="/blog/">Blog</a></li>
-            <li class="navigation-link"> <a href="/articles">Articles</a></li>
-            <li class="navigation-link"> <a href="/contact">Contact Us</a></li>
-
-        </ul>
+        
 
         <section class="blog-larutan">
             <h2>Larutan-Blog</h2>
+
+            <ul class="navigation">
+                <li class="navigation-link"><a href="/posts/post-1">Article 1</a></li>
+                <li class="navigation-link"><a href="/posts/post-2">Article 2</a></li>
+                <li class="navigation-link"><a href="/posts/post-3">Article 3</a></li>
+            </ul>
 
         </section>
 
@@ -27,6 +27,7 @@ import Card from '../components/Card.astro';
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
     .blog-larutan h2{
         font-size: 2rem;

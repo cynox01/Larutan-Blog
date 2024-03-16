@@ -1,23 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Nav from '../components/Nav.astro';
+
+const identify = {
+    firtsName: "John",
+    country: "France",
+    occupation: "Writer",
+    hobbies:["Photo", "Travel", "Work", "Read"]
+
+}
+
+const skills = ["Photography", "Writing", "Traveling", "Reading"]  
+
+const happy = true
+const finished = false
+const goal = 3
 ---
 
-<Layout title="Larutan Blog">
+<Layout title="About me">
+    <Nav />
 	<main>
-        <ul class="navigation">
-            <ul class="navigation">
-                <li class="navigation-link"><a href="/">Home</a> </li>
-                <li class="navigation-link"> <a href="/about">About</a></li>
-                <li class="navigation-link"> <a href="/blog/">Blog</a></li>
-                <li class="navigation-link"> <a href="/articles">Articles</a></li>
-                <li class="navigation-link"> <a href="/contact">Contact Us</a></li>
-    
-            </ul>
-        </ul>
+       
 
         <section class="about-larutan">
             <h2>Larutan-about</h2>
+
+            <div class="container">
+                <p>Some informations about me</p>
+
+                <ul>
+                    <li>My name is {identify.firtsName}.</li>
+                    <li>I live in {identify.country} and I work as a {identify.occupation}</li>
+                    {identify.hobbies.length >= 2 && 
+                        <li>My two hobbies are : {identify.hobbies[0]} and {identify.hobbies[1]}</li>
+                    }
+
+                    <p>My abilities are :</p> {skills.map((skill) => <li>{skill}</li>)}
+                </ul>
+                {happy && <p>¡Estoy feliz de aprender Astro!</p>}
+
+                {finished && <p>¡He terminado este tutorial!</p>}
+
+                {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
+            </div>
 
         </section>
 
@@ -29,6 +54,7 @@ import Card from '../components/Card.astro';
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
     .about-larutan h2{
         font-size: 2rem;
@@ -48,6 +74,19 @@ import Card from '../components/Card.astro';
     }
     .navigation-link a{
         text-decoration: none;
+        color: white;
+    }
+
+    .container p{
+        color: white;
+    }
+    .container ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+
+    }
+    .container ul li {
         color: white;
     }
 </style>
