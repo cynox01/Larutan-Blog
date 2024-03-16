@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BlogPost from '../components/BlogPost.astro';
+
+const allPosts = await Astro.glob('../pages/posts/*.md');
 
 ---
 
@@ -10,7 +13,9 @@ import Layout from '../layouts/Layout.astro';
 
         <section class="blog-larutan">
             <h2>Larutan-Blog</h2>
-
+            <ul>
+                {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+            </ul>
            
 
         </section>
