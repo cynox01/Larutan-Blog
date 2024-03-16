@@ -1,21 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav.astro';
+
 ---
 
 <Layout title="Larutan Blog">
-    <Nav />
+    
 	<main>
         
 
         <section class="blog-larutan">
             <h2>Larutan-Blog</h2>
 
-            <ul class="navigation">
-                <li class="navigation-link"><a href="/posts/post-1">Article 1</a></li>
-                <li class="navigation-link"><a href="/posts/post-2">Article 2</a></li>
-                <li class="navigation-link"><a href="/posts/post-3">Article 3</a></li>
-            </ul>
+           
 
         </section>
 
@@ -34,19 +30,5 @@ import Nav from '../components/Nav.astro';
         font-weight: 700;
         color: white;
     }
-    .navigation{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .navigation-link{
-        margin: 0 1rem;
-    }
-    .navigation-link a{
-        text-decoration: none;
-        color: white;
-    }
+   
 </style>
