@@ -15,8 +15,8 @@
   padding: 0;
 }
 main{
-  min-width: 320px ;
-  min-height: 100vh;
+  max-width: 1200px ;
+  margin: auto;
 }
 html {
   font-family: system-ui, sans-serif;
@@ -46,6 +46,9 @@ a {
 .hamburger {
     padding-right: 20px;
     cursor: pointer;
+    position: relative;
+    z-index: 100;
+    top: 0;
 }
   
 .hamburger .line {
@@ -57,7 +60,7 @@ a {
 }
 
 .navigation-link {
-  width: 100%;
+  min-width: 100vw;
   top: 5rem;
   left: 48px;
   background-color: #ff9776;
@@ -91,9 +94,13 @@ a {
   .navigation-link a {
     display: inline-block;
     padding: 15px 20px;
+    font-size: .7rem;
+  }
+  .hamburger{
+    display: none;
   }
 }
-@media screen and (min-width: 636px) {
+@media screen and (min-width: 700px) {
   .navigation-link {
     margin-left: 5em;
     display: block;
@@ -105,10 +112,9 @@ a {
   .navigation-link a {
     display: inline-block;
     padding: 15px 20px;
+    font-size: 1rem;
   }
-  .hamburger{
-    display: none;
-  }
+  
 }
 
 /*footer*/
